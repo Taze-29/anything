@@ -2,20 +2,51 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+.animated-border {  
+  position: relative;
+  font-size: 18px;
+  border-bottom: solid 2px rgb(156 163 175);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  .animate-border-in {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    border-bottom: solid 2px #000;
+    animation: border_anim 3s linear forwards;
+  }
+
+  .animate-border-out {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border-bottom: solid 2px #000;
+    animation: border_anim 3s linear reverse forwards;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes border_anim {
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 100%;
+  }
+}
+
+.dropdown {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transition: 
+    grid-template-rows 0.5s ease-in,
+    opacity 0.5s;  
+}
+
+.dropdown.active {
+  grid-template-rows: 1fr;
+  opacity: 1;
 }

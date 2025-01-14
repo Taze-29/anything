@@ -1,15 +1,16 @@
 import localFont from "next/font/local";
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+const montreal = localFont ({
+  src: "./fonts/Montreal-Regular.ttf",
+  variable: "--font-montreal",
+  weight: "400",
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+
+const montrealBold = localFont ({
+  src: "./fonts/Montreal-Bold.ttf",
+  variable: "--font-montreal-bold",
+  weight: "700",
 });
 
 export const metadata = {
@@ -21,7 +22,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${montreal.variable} ${montrealBold.variable} antialiased`}
       >
         {children}
       </body>
