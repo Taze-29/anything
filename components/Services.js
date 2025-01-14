@@ -1,7 +1,6 @@
 "use client";
 import ServiceCard from "@/components/ServiceCard";
 import { useRef, useEffect } from "react";
-import { motion, useTransform, useScroll } from "framer-motion";
 import { PiArrowDownLeftThin } from "react-icons/pi";
 
 
@@ -69,9 +68,8 @@ const Services = () => {
             ref={titleRef}
         >
           
-          <motion.div 
-            className="flex w-full" 
-            style={{ opacity: opacity }}
+          <div
+            className="flex w-full"             
           >
         
           <div className="flex flex-col text-[150px] leading-none w-[75%] justify-center">
@@ -82,7 +80,7 @@ const Services = () => {
             <PiArrowDownLeftThin className="text-[250px]"/>
           </div>
 
-          </motion.div>
+          </div>
         </div>
       </div>
       
