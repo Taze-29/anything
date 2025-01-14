@@ -46,27 +46,12 @@ const cardData = [
   },
 ]
 
-const Services = () => {
-
-  const titleRef = useRef(null);
-
-  const { scrollYProgress } = useScroll({
-    target: titleRef, // Set the target reference to the element
-    offset: ["start end", "end 50%"], // Define offset for triggering the scroll
-  });
-  const opacity = useTransform(scrollYProgress, [0, 0.9, 1.5], [1, 1, 0]);
-  
-  useEffect(() => {
-    // Log the scrollYProgress to see its values
-    console.log(opacity);
-  }, [opacity]);
+const Services = () => {  
 
   return (      
     <div className="relative flex flex-col py-12">
       <div className="sticky top-0">      
-        <div className="flex w-full px-36 relative top-[-10%] w-[90%] h-[90vh] mb-24" 
-            ref={titleRef}
-        >
+        <div className="flex w-full px-36 relative top-[-10%] w-[90%] h-[90vh] mb-24">
           
           <div
             className="flex w-full"             
