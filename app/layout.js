@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${montreal.variable} ${montrealBold.variable} antialiased`}
+        className={`${montreal.variable} ${montrealBold.variable} antialiased bg-[#f2f2f2]`}
       >
         {children}
       </body>
