@@ -1,45 +1,44 @@
 "use client";
 const cardData = [
   {
-    title: "Web Design & development",
+    title: "Website Development",
     tags: [
-      "custom solution",
-      "wordpress",
-      "aedsfvnhjj",
-      "custom solution",
-      "custom solution"
+      "custom websites",
+      "responsive design",
+      "CMS integration",
+      "user-friendly"
     ],
-    desc: "We design and develop beautiful, responsive websites that are tailored to your brand and your customers.",
-    link: "",
-    imgSrc: "",
+    desc: "We design and develop modern, responsive websites that are tailored to your business needs. From e-commerce platforms to custom CMS solutions, we build it all.",
+    link: "https://example.com/website-development",
+    imgSrc: "https://example.com/images/website-development.jpg",
   },
   {
-    title: "Web Design & development",
+    title: "Website Maintenance",
     tags: [
-      "custom solution",
-      "wordpress",
-      "aedsfvnhjj",
-      "custom solution",
-      "custom solution"
+      "regular updates",
+      "performance monitoring",
+      "security checks",
+      "bug fixes",
+      "backup solutions"
     ],
-    desc: "We design and develop beautiful, responsive websites that are tailored to your brand and your customers.",
-    link: "",
-    imgSrc: "",
+    desc: "We provide ongoing website maintenance to keep your site secure, fast, and up-to-date. Focus on your business while we handle the technical details.",
+    link: "https://example.com/website-maintenance",
+    imgSrc: "https://example.com/images/website-maintenance.jpg",
   },
   {
-    title: "Web Design & development",
+    title: "Search Engine Optimization",
     tags: [
-      "custom solution",
-      "wordpress",
-      "aedsfvnhjj",
-      "custom solution",
-      "custom solution"
+      "on-page SEO",
+      "keyword research",
+      "content optimization",
+      "technical SEO",
+      "local SEO"
     ],
-    desc: "We design and develop beautiful, responsive websites that are tailored to your brand and your customers.",
-    link: "",
-    imgSrc: "",
+    desc: "Our SEO services ensure your website ranks higher in search results. We optimize your content, improve site performance, and help you attract more traffic.",
+    link: "https://example.com/seo-services",
+    imgSrc: "https://example.com/images/seo-services.jpg",
   },
-]
+];
 
 import ServiceCard from "@/components/ServiceCard";
 import { useState, useRef, useEffect } from "react";

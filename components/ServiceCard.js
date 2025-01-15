@@ -3,6 +3,8 @@ import { useRef, useEffect, useState } from "react";
 import Link from 'next/link';
 import { motion, useTransform } from "framer-motion";
 
+import { GoArrowRight } from "react-icons/go";
+
 const ServiceCard = ({ title, tags, desc, link, imgSrc, range, progress }) => {
 
   const scale = useTransform(progress, range, [1, 0.75]);
@@ -35,11 +37,11 @@ const ServiceCard = ({ title, tags, desc, link, imgSrc, range, progress }) => {
             </div>
 
             <div className="text-2xl">{desc}</div>
-
-            <div>
-              <Link href={link} className="border-2 border-black rounded-full py-1 px-2">
-                Find out more ➡️
-              </Link>
+            
+            <div className="w-[200px]">
+              <Link href={link} className="border-2 border-black rounded-full py-1 px-2 flex justify-center items-center gap-2 hover:bg-black hover:text-white transition-all duration-300">
+                  <span>Find out more</span> <GoArrowRight /> 
+              </Link>            
             </div>
           </div>
           <div className="flex px-16 w-[50%] justify-center items-center">

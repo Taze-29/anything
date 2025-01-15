@@ -11,7 +11,7 @@ export default function Index() {
       number: "01/",
       desc: "Developing stunning one-of-a-kind digital design that catches people’s eyes and brings your brand to life online.",
       srcs: [
-        "/img/bloomberg/img1.jpg",
+        "/img/beauty.webp",
       ],
     },
     {
@@ -19,7 +19,7 @@ export default function Index() {
       number: "02/",
       desc: "As a web design agency, we love to deliver meaningful and intuitive user experiences that build trust with your target audience.",
       srcs: [
-        "/img/westgate/img1.jpg",
+        "/img/thought.webp",
       ],
     },
     {
@@ -27,7 +27,7 @@ export default function Index() {
       number: "03/",
       desc: "Designing tailor made solutions that resonate with your customers and drives them to act.",
       srcs: [
-        "/img/blavatnik/img6.jpg",
+        "/img/impact.webp",
       ],
     },
   ];
@@ -40,22 +40,26 @@ export default function Index() {
   return (
     <>
       <Modal modal={modal} projects={projects} project={project} />
-      <div className="flex flex-col justify-center items-start h-[100svh] w-full px-36 text-gray-300 gap-2">
+      <div className="flex flex-col justify-center items-start h-[100svh] w-full px-36 text-gray-300">
         {projects.map(({ name, number, desc }, index) => {
           return (
             <div 
-              className="flex flex-col w-full"
+              className="flex flex-col w-full cursor-default"
               onMouseOver={() => {
                 setModal(true), setProject(index);
               }}
-              onMouseLeave={() => setModal(false)}
+              onMouseOut={(event) => {
+                if (!event.currentTarget.contains(event.relatedTarget)) {
+                  setModal(false)
+                }
+                }}
               key={index}            
             >
               <div className="flex w-full py-10 hover:text-black justify-between">
                 <div className="flex flex-col">
                 <span className="text-3xl -mb-4">{number}</span>
                 <h2                
-                  className={`w-[fit-content] text-[6vw] cursor-pointer z-40 transition-all duration-200 hover:color-[#d38d2c] ${modal && project === index ? "translate-x-[-10px]" : "translate-x-0"}`}
+                  className={`w-[fit-content] text-[6vw] z-40 transition-all duration-200 hover:color-[#d38d2c] ${modal && project === index ? "translate-x-[-10px]" : "translate-x-0"}`}
                 >
                   {name}
                 </h2>

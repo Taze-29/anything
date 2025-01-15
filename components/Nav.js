@@ -46,14 +46,14 @@ const Nav = () => {
           </div>
         </div>
         {/* Menu */}
-        <div className="absolute -z-10 top-4 right-4 w-80 h-80 bg-white rounded-lg transition-all ease-in-out duration-300 delay-200 origin-top-right pt-16 pl-10"
+        <div className="absolute -z-10 top-4 right-4 w-80 h-96 bg-white rounded-lg transition-all ease-in-out duration-300 delay-200 origin-top-right pt-16 pl-10"
           style={{            
             scale: active ? 1 : 0.5,
             opacity: active ? 1 : 0
           }}
         />            
         <div 
-          className="absolute z-10 top-4 right-4 w-80 h-80 flex flex-col gap-4 p-4 pt-16 font-semibold text-xl pl-10 transition-all ease-in-out duration-300 origin-top-right delay-200" 
+          className="absolute z-10 top-4 right-4 w-80 h-96 flex flex-col gap-4 p-4 pt-16 font-semibold text-xl pl-10 transition-all ease-in-out duration-300 origin-top-right delay-200" 
           style={{
             //display: active ? "flex" : "none",
             scale: active ? 1 : 0.5,
@@ -61,10 +61,11 @@ const Nav = () => {
           }}
         >
           <Link href="/">Home</Link>
+          <Link href="/services">Services</Link>
           <Link href="/work">Our work</Link>
           <Link href="/pricing">Pricing</Link>
           <Link href="/contact">Contact</Link>
-          <div className="flex justify-center items-center gap-2 border border-2 border-black rounded-full mr-10 mt-2 px-3 py-2 font-normal text-md hover:bg-black hover:text-white cursor-pointer">
+          <div className="flex justify-center items-center gap-2 border border-2 border-black rounded-full mr-10 mt-2 px-3 py-2 font-normal text-md hover:bg-black hover:text-white transition-all duration-300 cursor-pointer">
             Start your project <GoArrowRight />
           </div>
         </div>

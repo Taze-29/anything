@@ -5,7 +5,6 @@ import Services from "@/components/Services";
 import Bespoke from "@/components/Bespoke";
 import Work from "@/components/Work";
 import Faq from "@/components/Faq";
-import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -15,7 +14,6 @@ export default function Home() {
     <Bespoke />
     <Work />
     <Faq />
-    <Footer />
     </>
   );
 }
