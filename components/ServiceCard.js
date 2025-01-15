@@ -1,7 +1,7 @@
 "use client";
 import { useRef, useEffect, useState } from "react";
 import Link from 'next/link';
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useTransform } from "framer-motion";
 
 const ServiceCard = ({ title, tags, desc, link, imgSrc, range, progress }) => {
 
