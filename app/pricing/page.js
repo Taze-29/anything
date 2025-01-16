@@ -1,13 +1,11 @@
-import Nav from "@/components/Nav";
 import Faq from "@/components/Faq";
-import Footer from "@/components/Footer";
+import PricingHero from "@/components/PricingHero";
 
 export default function Home() {
     return (
       <>
-      <Nav />
+      <PricingHero/>
       <Faq />
-      <Footer />
       </>
     );
   }
