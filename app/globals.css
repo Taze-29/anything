@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Hover area */
+
 .animated-border {  
   position: relative;
   font-size: 18px;
@@ -36,6 +38,8 @@
     width: 100%;
   }
 }
+
+/* FAQ */
 
 .dropdown {
   display: grid;

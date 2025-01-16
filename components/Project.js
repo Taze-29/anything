@@ -25,8 +25,8 @@ const Project = ({name, year, src, desc, tags}) => {
         <h2 className="text-xl">{name}</h2>
         </div>
         <span className="text-xl">{year}</span>
-      </div>
-      <div className="relative rounded-2xl w-full h-full z-10 -mt-5">
+      </div>      
+      <div className="relative rounded-2xl w-full h-full z-10 -mt-5">        
         <Image src={src} layout="fill" objectFit="cover" alt={"Project Image"} className="rounded-2xl"/>
         <div className={`absolute bg-black bg-opacity-60 rounded-2xl w-full h-full flex flex-col justify-between px-16 transition-opacity duration-500 ${hover ? "opacity-100" : "opacity-0"}`}>
           <div className="flex justify-center items-center w-3/4 h-full">

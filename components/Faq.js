@@ -34,7 +34,7 @@ const Faq = () => {
   const [active, setActive] = useState(null);
 
   return (
-    <div className="flex flex-col bg-black w-full text-white px-32 gap-6">
+    <div className="flex flex-col bg-black w-full text-white px-36 gap-6">
       <h1 className="text-9xl mb-8">FAQ's</h1>            
         {questions.map(({ q, a }, index) => {
           return (

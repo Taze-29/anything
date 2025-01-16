@@ -6,14 +6,14 @@ const projects = [
   {
     name: "My project",
     year: "2024",
-    src: "/img/blavatnik/img6.jpg",
+    src: "/img/eleanorwakefield.jpg",
     desc: "We created the visual and verbal brand for this new flight loan company.",
     tags: ["Branding", "Web Design", "Web Development"],
   },
   {
     name: "My project",
     year: "2024",
-    src: "/img/blavatnik/img6.jpg",
+    src: "/img/brikbloom.png",
     desc: "We created the visual and verbal brand for this new flight loan company.",
     tags: ["Branding", "Web Design", "Web Development"],
   }

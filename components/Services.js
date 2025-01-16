@@ -9,8 +9,8 @@ const cardData = [
       "user-friendly"
     ],
     desc: "We design and develop modern, responsive websites that are tailored to your business needs. From e-commerce platforms to custom CMS solutions, we build it all.",
-    link: "https://example.com/website-development",
-    imgSrc: "https://example.com/images/website-development.jpg",
+    //link: "https://example.com/website-development",
+    imgSrc: "/img/service1.jpg",
   },
   {
     title: "Website Maintenance",
@@ -19,11 +19,11 @@ const cardData = [
       "performance monitoring",
       "security checks",
       "bug fixes",
-      "backup solutions"
+      //"backup solutions"
     ],
     desc: "We provide ongoing website maintenance to keep your site secure, fast, and up-to-date. Focus on your business while we handle the technical details.",
-    link: "https://example.com/website-maintenance",
-    imgSrc: "https://example.com/images/website-maintenance.jpg",
+    //link: "https://example.com/website-maintenance",
+    imgSrc: "/img/service2.jpg",
   },
   {
     title: "Search Engine Optimization",
@@ -35,8 +35,8 @@ const cardData = [
       "local SEO"
     ],
     desc: "Our SEO services ensure your website ranks higher in search results. We optimize your content, improve site performance, and help you attract more traffic.",
-    link: "https://example.com/seo-services",
-    imgSrc: "https://example.com/images/seo-services.jpg",
+    //link: "https://example.com/seo-services",
+    imgSrc: "/img/service3.jpg",
   },
 ];
 
@@ -53,10 +53,6 @@ const Services = () => {
     target: container,
     offset: ['start start', 'end end']
   });
-
-  useEffect(() => {
-    scrollYProgress.on("change", e => console.log(scrollYProgress.current));
-  }, []);
 
   const scale = useTransform(scrollYProgress, [0, 0.33], [1, 0.75]);
   const opacity = useTransform(scrollYProgress, [0, 0.33], [1, 0]);

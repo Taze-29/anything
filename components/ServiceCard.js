@@ -1,24 +1,29 @@
 "use client";
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useState, use } from "react";
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion, useTransform } from "framer-motion";
 
 import { GoArrowRight } from "react-icons/go";
 
-const ServiceCard = ({ title, tags, desc, link, imgSrc, range, progress }) => {
+const ServiceCard = ({ title, tags, desc, link, imgSrc, range, progress, index }) => {
 
-  const scale = useTransform(progress, range, [1, 0.75]);
-  const opacity = useTransform(progress, range, [1, 0]);
 
-  useEffect(() => {
-    console.log(progress);
-    console.log(range);
-  }, []);
+  let scale = 1;
+  let opacity = 1;
+  const imageScale = useTransform(progress, range, [1.25, 1]);
 
+  if (index === 2){
+    scale = 1;
+    opacity = 1;
+  } else {    
+    scale = useTransform(progress, range, [1, 0.75]);
+    opacity = useTransform(progress, range, [1, 0]);  
+  }
   return (
     <div className="min-h-[100vh] flex justify-center items-center sticky top-0">
       <motion.div 
-        className="relative top-[-10%] w-[90%] h-[90vh]"
+        className="relative top-[-10%] px-32 h-[90vh]"
         style={{
           scale,
           opacity: opacity,
@@ -39,13 +44,26 @@ const ServiceCard = ({ title, tags, desc, link, imgSrc, range, progress }) => {
             <div className="text-2xl">{desc}</div>
             
             <div className="w-[200px]">
-              <Link href={link} className="border-2 border-black rounded-full py-1 px-2 flex justify-center items-center gap-2 hover:bg-black hover:text-white transition-all duration-300">
+              <Link href="/services" className="border-2 border-black rounded-full py-1 px-2 flex justify-center items-center gap-2 hover:bg-black hover:text-white transition-all duration-300">
                   <span>Find out more</span> <GoArrowRight /> 
               </Link>            
             </div>
           </div>
-          <div className="flex px-16 w-[50%] justify-center items-center">
-            <div className="w-[100%] h-[80%] bg-red-500 border rounded-tr-[200px]"></div>
+          <div className="flex px-16 w-[50%] justify-center items-center relative">
+            
+            {/* <div className="w-[100%] h-[80%] bg-red-500 border rounded-tr-[200px]" /> */}
+                        
+            <div className="w-[100%] h-[80%] overflow-hidden">
+              <motion.div
+                className="relative w-full h-full"
+                style={{
+                  scale: imageScale,
+                }}
+              >
+                <Image src={imgSrc} alt="Service" className="w-[100%] h-[80%] rounded-tr-[200px]" fill objectFit="cover"/>
+              </motion.div>
+            </div>
+            
           </div>
         </div>
       </motion.div>
