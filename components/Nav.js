@@ -14,8 +14,6 @@ const Nav = () => {
 
   const [scrollY, setScrollY] = useState(0);
 
-  //scrollListener
-
   useEffect(() => {
     window.addEventListener("scroll", () => {      
       setScrollY(window.scrollY);
@@ -23,10 +21,9 @@ const Nav = () => {
   }
   , []);
 
-
   return (
     <div className="fixed w-full h-28 flex justify-between z-50">
-      <div className="flex items-center">
+      <Link href="/" className="flex items-center">
 
         {/* Logo */}
         <div className={`w-28 h-28 ml-2 mt-4 p-4 absolute transition transition-opacity duration-300 ${scrollY < 6030 ? "opacity-100" : "opacity-0"}`}>
@@ -34,13 +31,9 @@ const Nav = () => {
         </div>
         <div className={`w-28 h-28 ml-2 mt-4 p-4 absolute transition transition-opacity duration-300 ${scrollY >= 6030 ? "opacity-100" : "opacity-0"}`}>
           <img src="/logoWhite.svg" alt="Logo" />
-        </div>        
-                
-        {/* Title 
-        <h1 className="text-md text-center">Website Name</h1>      
-        */}
+        </div>                              
 
-      </div>
+      </Link>
 
       {/* Menu */}
       <div className="flex justify-center items-center mr-8">

@@ -3,16 +3,17 @@ import Image from "next/image";
 import { useState } from "react";
 import { FiArrowDownRight } from "react-icons/fi";
 
-const Project = ({name, year, src, desc, tags}) => {
+const Project = ({name, year, src, desc, url, tags}) => {
   const [hover, setHover] = useState(false);
   return (
     <div 
       className="h-[500px] w-full rounded-2xl flex flex-col cursor-pointer"
       onMouseOver={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
+      onClick={() => window.open(url)}
     >
       <div className="flex justify-between text-white p-4 border-t border-l border-r border-gray-600 rounded-t-3xl pb-8">
-        <div className="flex justify-center">
+        <div className="flex justify-center gap-1">
         <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text">
           <svg width="0" height="0">
             <linearGradient id="blue-gradient" x1="100%" y1="100%" x2="0%" y2="0%">

@@ -1,21 +1,23 @@
 import Project from "./Project";
 import { FiArrowRight } from "react-icons/fi";
-
+import Link from "next/link";
 
 const projects = [
   {
-    name: "My project",
+    name: "Eleanor Wakefield",
     year: "2024",
     src: "/img/eleanorwakefield.jpg",
-    desc: "We created the visual and verbal brand for this new flight loan company.",
-    tags: ["Branding", "Web Design", "Web Development"],
+    desc: "We built a custom website for our client to showcase their work and services.",
+    url: "https://eleanorwakefield.com",
+    tags: ["Web Design", "Web Development", "Image Optimisation"],
   },
   {
-    name: "My project",
+    name: "Brikbloom Property Sourcing",
     year: "2024",
     src: "/img/brikbloom.png",
-    desc: "We created the visual and verbal brand for this new flight loan company.",
-    tags: ["Branding", "Web Design", "Web Development"],
+    desc: "We rebuilt our client's existing website to run at blazing fast speeds.",
+    url: "https://brikbloom.com",
+    tags: ["Web Design", "Web Development", "SEO"],
   }
 ]
 
@@ -36,13 +38,18 @@ const Work = () => {
       </div>
 
     <div className="flex flex-col items-center px-36 gap-12">
-      {projects.map(({ name, year, src, desc, tags }, index) => {
+      {projects.map(({ name, year, src, desc, url, tags }, index) => {
         return (
-          <Project name={name} year={year} src={src} desc={desc} tags={tags} key={index} />
+          <Project name={name} year={year} src={src} desc={desc} url={url} tags={tags} key={index} />
         );
       })}
       <div className="flex justify-center items-center w-1/2 h-24">
-        <button className="border-2 border-white rounded-full py-3 px-5 text-white flex justify-center items-center leading-none gap-2 hover:bg-white hover:text-black transition duration-500">View all projects <FiArrowRight /></button>
+        <Link 
+          className="border-2 border-white rounded-full py-3 px-5 text-white flex justify-center items-center leading-none gap-2 hover:bg-white hover:text-black transition duration-500"
+          href="/projects"
+        >
+          View all projects <FiArrowRight />
+        </Link>
       </div>
     </div>
 

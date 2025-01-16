@@ -16,7 +16,7 @@ const Hero = () => {
           <motion.div
             initial={{ y: "100%" }}
             animate={{ y: "0%" }}
-            transition={{ duration: .5, delay: 0, timingFunction: "ease-in-out"  }}
+            transition={{ duration: .5, delay: 0 }}
           >
             Crafting
           </motion.div>
@@ -25,7 +25,7 @@ const Hero = () => {
           <motion.div 
             initial={{ y: "100%" }}
             animate={{ y: "0%" }}
-            transition={{ duration: .5, delay: .1, timingFunction: "ease-in-out" }}            
+            transition={{ duration: .5, delay: .1 }}            
           >
             Digital
           </motion.div>
@@ -34,14 +34,14 @@ const Hero = () => {
           <motion.div 
             initial={{ y: "100%" }}
             animate={{ y: "0%" }}
-            transition={{ duration: .5, delay: .2, timingFunction: "ease-in-out"  }}            
+            transition={{ duration: .5, delay: .2 }}            
           >
             Brilliance
           </motion.div>
         </div>
 
         <div 
-          className="absolute bottom-[4svh] right-0 leading-normal h-42 w-[30%] flex justify-center items-center pr-[12rem] pb-[2rem] text-xl text-gray-700"
+          className="absolute bottom-[2svh] right-0 leading-normal h-42 w-[30%] flex justify-center items-center pr-[12rem] pb-[2rem] text-xl text-gray-700"
           style={{
             fontFamily: "Montreal",
           }}
@@ -49,7 +49,7 @@ const Hero = () => {
           <motion.div 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: .5, delay: .5, timingFunction: "ease-in-out" }}
+            transition={{ duration: .5, delay: .5 }}
             className="overflow-hidden"          
           >                    
             <span className="font-normal">We’re a forward thinking web design and development agency located in England, dedicated to creating <span className="font-bold">stunning digital experiences</span> that stand out from the crowd.</span>
