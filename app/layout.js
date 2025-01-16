@@ -1,23 +1,4 @@
-import localFont from "next/font/local";
 import "./globals.css";
-
-const montreal = localFont ({
-  src: "./fonts/Montreal-Regular.ttf",
-  variable: "--font-montreal",
-  weight: "400",
-});
-
-const montrealBold = localFont ({
-  src: "./fonts/Montreal-Bold.ttf",
-  variable: "--font-montreal-bold",
-  weight: "700",
-});
-
-const lovelo = localFont ({
-  src: "./fonts/Lovelo-Black.ttf",
-  variable: "--font-lovelo",
-  weight: "400",
-});
 
 export const metadata = {
   title: "Create Next App",
@@ -31,9 +12,12 @@ import Footer from "@/components/Footer";
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${montreal.variable} ${montrealBold.variable} ${lovelo.variable} antialiased bg-[#f2f2f2]`}
-      >        
+      <body 
+        className="antialiased bg-[#f2f2f2]"
+        style={{
+          fontFamily: "Montreal",
+        }}
+      >
         <Nav />
         <div className="pt-28">
           {children}

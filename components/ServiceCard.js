@@ -31,7 +31,7 @@ const ServiceCard = ({ title, tags, desc, link, imgSrc, range, progress, index }
       >        
         <div className="flex bg-white rounded-[60px]">
           <div className="flex flex-col w-[50%] px-16 py-48 gap-8">
-            <div className="text-[110px] leading-none">{title}</div>
+            <div className="text-[90px] leading-none">{title}</div>
 
             <div className="flex gap-4">
               {tags.map((tag, index) => (
