@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <div>
       {/*Hero Text */}
-      <div className={`relative flex flex-col w-full font-bold md:leading-[34svh] top-[-4vh]`}
+      <div className={`relative flex flex-col w-full font-bold md:leading-[34svh] top-[-4vh] overflow-hidden`}
       style={{
         fontFamily: "GrandSapphire",
       }}
@@ -41,7 +41,7 @@ const Hero = () => {
         </div>
 
         <div 
-          className="absolute bottom-[2svh] right-0 leading-normal h-42 w-[30%] flex justify-center items-center pr-[12rem] pb-[2rem] text-xl text-gray-700"
+          className="absolute bottom-[2svh] right-[-5%] leading-normal h-42 w-[30%] flex justify-center items-center pr-[12rem] pb-[2rem] text-xl text-gray-700"
           style={{
             fontFamily: "Montreal",
           }}

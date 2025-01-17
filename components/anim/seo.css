@@ -1,0 +1,181 @@
+.seo{
+  display:flex;
+  flex-direction:column;
+  width:500px;
+  height:300px;
+  background:#F1F1F1;
+  .seo-header{
+    display:flex;
+    width:80%;
+    margin:0 auto;
+    margin-top:20px;
+    .g:nth-child(1){
+       display:block;
+       height:20px; 
+       width:10px;
+      background:#4285F4;
+    }
+    .o{
+      display:block;
+      height:10px;
+      width:10px;
+      margin-top:10px;
+    }
+    .o:nth-child(2){
+      background:#EA4335;
+    }
+    .o:nth-child(3){
+      background:#FBBC05;
+    }
+    .g:nth-child(4){
+      height:17px;
+      width:10px;
+      margin-top:10px;
+      background:#4285F4;
+    }
+    .l:nth-child(5){
+      height:20px;
+      width:7px;
+      background:#34A853;
+    }
+    .e:nth-child(6){
+      height:10px;
+      width:10px;
+      margin-top:10px;
+      background:#EA4335;
+    }
+    .seo-search{
+      margin-left:10px;
+      height:20px;
+      width: 250px;
+      background:#FFF;
+    }
+  }
+    .seo-results{
+      display:flex;
+      width:80%;
+      margin:0 auto;
+      ul{
+        margin:0;
+        padding:0;
+        display:flex;
+        flex-direction:column;
+        width:100%;
+        li{
+          list-style-type:none;
+          background:#FFF;
+          flex:1;
+          width:100%;
+          padding:10px 0 10px 10px;
+          margin-top:10px;
+          .generic-result{
+            display:block;
+            height:20px;
+            width:95%;
+            background:#DDD;
+          }
+          .improved-result{
+            display:block;
+            height:20px;
+            width:95%;
+            background:#4285F4;
+            
+          }
+        }
+        #result-1{
+          order:1;
+          animation: results1 10s infinite;
+        }
+        #result-2{
+          order:2;
+          animation: result2 10s infinite;
+        }
+        #result-3{
+          order:3;
+          animation: result3 10s infinite;
+        }
+        #result-4{
+          order:4;
+          animation: result4 10s infinite;
+        }
+        #result-5{
+          order:5;
+          animation: result5 10s infinite;
+        }
+      }
+    }
+}
+
+@keyframes result5{
+  0%{
+    order:5;
+  }
+  20%{
+    order:4
+  }
+  40%{
+    order:3
+  }
+  60%{
+    order:2
+  }
+  80%{
+    order:1;
+  }
+  100%{
+    order:1;
+  }
+}
+@keyframes result4{
+  0%{
+    order:4;
+  }
+  20%{
+    order:5;
+  }
+  100%{
+    order:5
+  }
+}
+
+@keyframes result3{
+  0%{
+    order:3;
+  }
+  20%{
+    order:3;
+  }
+  40%{
+    order:4;
+  }
+  100%{
+    order:4;
+  }
+}
+
+@keyframes results2{
+  0%{
+    order:2;
+  }
+  40%{
+    order:2;
+  }
+  60%{
+    order:3;
+  }
+}
+
+@keyframes results1{
+  0%{
+    order:1;
+  }
+  79%{
+    order:1;
+  }
+  80%{
+    order:2;
+  }
+  100%{
+    order:2;
+  }
+}

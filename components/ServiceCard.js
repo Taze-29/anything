@@ -3,10 +3,11 @@ import { useRef, useEffect, useState, use } from "react";
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion, useTransform } from "framer-motion";
+import Macbook from "@/components/anim/mac";
 
 import { GoArrowRight } from "react-icons/go";
 
-const ServiceCard = ({ title, tags, desc, link, imgSrc, range, progress, index }) => {
+const ServiceCard = ({ title, tags, desc, link, imgSrc, content, range, progress, index }) => {
 
 
   let scale = 1;
@@ -35,7 +36,7 @@ const ServiceCard = ({ title, tags, desc, link, imgSrc, range, progress, index }
 
             <div className="flex gap-4">
               {tags.map((tag, index) => (
-                <div key={index} className="border border-grey-100 rounded-3xl py-1 px-2 hover:bg-black hover:text-white transition duration-300 cursor-default">
+                <div key={index} className="border border-grey-100 rounded-3xl py-1 px-2 text-md hover:bg-black hover:text-white transition duration-300 cursor-default">
                   {tag}
                 </div>
               ))}
@@ -54,6 +55,7 @@ const ServiceCard = ({ title, tags, desc, link, imgSrc, range, progress, index }
             {/* <div className="w-[100%] h-[80%] bg-red-500 border rounded-tr-[200px]" /> */}
                         
             <div className="w-[100%] h-[80%] overflow-hidden">
+              {/*
               <motion.div
                 className="relative w-full h-full"
                 style={{
@@ -62,6 +64,8 @@ const ServiceCard = ({ title, tags, desc, link, imgSrc, range, progress, index }
               >
                 <Image src={imgSrc} alt="Service" className="w-[100%] h-[80%] rounded-tr-[200px]" fill objectFit="cover"/>
               </motion.div>
+              */}
+              {content}
             </div>
             
           </div>

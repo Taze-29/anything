@@ -1,42 +1,49 @@
 "use client";
+
+import Macbook from "@/components/anim/mac";
+import Cogs from "@/components/anim/cogs";
+import SEO from "@/components/anim/seo";
+
 const cardData = [
   {
     title: "Website Development",
     tags: [
-      "custom websites",
-      "responsive design",
+      "Custom websites",
+      "Responsive design",
       "CMS integration",
-      "user-friendly"
+      "User-friendly"
     ],
     desc: "We design and develop modern, responsive websites that are tailored to your business needs. From e-commerce platforms to custom CMS solutions, we build it all.",
     //link: "https://example.com/website-development",
     imgSrc: "/img/service1.jpg",
+    content: <Macbook />
   },
   {
     title: "Website Maintenance",
     tags: [
-      "regular updates",
-      "performance monitoring",
-      "security checks",
-      "bug fixes",
+      "Regular updates",
+      "Performance monitoring",
+      "Security checks",
+      "Bug fixes",
       //"backup solutions"
     ],
     desc: "We provide ongoing website maintenance to keep your site secure, fast, and up-to-date. Focus on your business while we handle the technical details.",
     //link: "https://example.com/website-maintenance",
     imgSrc: "/img/service2.jpg",
+    content: <Cogs />
   },
   {
     title: "Search Engine Optimization",
     tags: [
-      "on-page SEO",
-      "keyword research",
-      "content optimization",
-      "technical SEO",
-      "local SEO"
+      "On-page SEO",
+      "Keyword research",
+      "Technical SEO",
+      "Local SEO"
     ],
     desc: "Our SEO services ensure your website ranks higher in search results. We optimize your content, improve site performance, and help you attract more traffic.",
     //link: "https://example.com/seo-services",
     imgSrc: "/img/service3.jpg",
+    content: <SEO />
   },
 ];
 
