@@ -9,7 +9,7 @@ export default function Index() {
     {
       name: "Beauty",
       number: "01/",
-      desc: "Developing stunning one-of-a-kind digital design that catches people’s eyes and brings your brand to life online.",
+      desc: "We create visually captivating, custom designs that not only catch the eye but also tell your brand's story, making a lasting impression online.",
       srcs: [
         "/img/beauty.webp",
       ],
@@ -17,7 +17,7 @@ export default function Index() {
     {
       name: "Thought",
       number: "02/",
-      desc: "As a web design agency, we love to deliver meaningful and intuitive user experiences that build trust with your target audience.",
+      desc: "We believe in thoughtful design that goes beyond aesthetics—creating intuitive, user-friendly experiences that connect and build trust with your audience.",
       srcs: [
         "/img/thought.webp",
       ],
@@ -25,7 +25,7 @@ export default function Index() {
     {
       name: "Impact",
       number: "03/",
-      desc: "Designing tailor made solutions that resonate with your customers and drives them to act.",
+      desc: "Every website we craft is a tailored solution designed to resonate with your customers and drive meaningful actions that propel your business forward.",
       srcs: [
         "/img/impact.webp",
       ],

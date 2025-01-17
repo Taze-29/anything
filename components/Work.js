@@ -31,9 +31,9 @@ const Work = () => {
           <h1 className="text-[9vw] leading-none text-white pl-32">WORK</h1>
         </div>
 
-        <div className="flex flex-col w-1/2 justify-center gap-4">
-          <h2 className="text-7xl text-white">Making brands a damn site better.</h2>
-          <p className="text-white text-lg pr-32">Let’s face it, first impressions matter. Your website’s an opportunity to wow your audience, so why choose bad design? Brands win over fans when they’re brave enough to go beyond their creative comfort zone.</p>
+        <div className="flex flex-col w-1/2 justify-center gap-4 pr-30">
+          <h2 className="text-7xl text-white">Elevating websites to a whole new level.</h2>
+          <p className="text-white text-lg">First impressions matter, and your website is your chance to impress. Why settle for average design? The best websites break the mold and push creative boundaries to engage and captivate visitors from the start.</p>
         </div>        
       </div>
 

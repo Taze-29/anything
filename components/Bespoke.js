@@ -1,12 +1,14 @@
 import HoverArea from "@/components/HoverArea"
 
-const Bespoke = () => {
+import Paragraph from "@/components/Character";
+
+const Bespoke = () => {  
 
   return (
     <div className="overflow-hidden">
-    <div className="w-full flex justify-center items-center text-9xl my-32">
-      <div className="w-[75%] text-center">
-        <h2>We develop bespoke websites with <span className="underline">three things in mind</span></h2>
+    <div className="w-full flex justify-center items-center text-8xl mt-32 mb-24">
+      <div className="w-[75%] text-center">        
+        <Paragraph paragraph={"We create custom websites with a focus on three key elements"} />                    
       </div>
     </div>
     <HoverArea />

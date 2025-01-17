@@ -15,17 +15,11 @@ const Footer = () => {
           <div className="flex items-center gap-6">
             <span>Our sectors:</span>
             <div className="border border-white px-4 py-1 rounded-full text-white flex justify-center items-center text-lg">
-              Agencies
+              Photography
             </div>
             <div className="border border-white px-4 py-1 rounded-full text-white flex justify-center items-center text-lg">
-              Agencies
-            </div>
-            <div className="border border-white px-4 py-1 rounded-full text-white flex justify-center items-center text-lg">
-              Agencies
-            </div>
-            <div className="border border-white px-4 py-1 rounded-full text-white flex justify-center items-center text-lg">
-              Agencies
-            </div>
+              Property
+            </div>            
           </div>
 
 
