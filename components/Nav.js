@@ -16,6 +16,7 @@ const Nav = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", () => {      
+      console.log(window.scrollY);
       setScrollY(window.scrollY);
     });
   }
@@ -26,10 +27,10 @@ const Nav = () => {
       <Link href="/" className="flex items-center">
 
         {/* Logo */}
-        <div className={`w-28 h-28 ml-2 mt-4 p-4 absolute transition transition-opacity duration-300 ${scrollY < 6030 ? "opacity-100" : "opacity-0"}`}>
+        <div className={`w-28 h-28 ml-2 mt-4 p-4 absolute transition transition-opacity duration-300 ${scrollY < 6160 ? "opacity-100" : "opacity-0"}`}>
           <img src="/logoBlack.svg" alt="Logo" />          
         </div>
-        <div className={`w-28 h-28 ml-2 mt-4 p-4 absolute transition transition-opacity duration-300 ${scrollY >= 6030 ? "opacity-100" : "opacity-0"}`}>
+        <div className={`w-28 h-28 ml-2 mt-4 p-4 absolute transition transition-opacity duration-300 ${scrollY >= 6160 ? "opacity-100" : "opacity-0"}`}>
           <img src="/logoWhite.svg" alt="Logo" />
         </div>                              
 
@@ -39,11 +40,10 @@ const Nav = () => {
       <div className="flex justify-center items-center mr-8">
         {/* Button */ }
         <div 
-          className="z-20 w-12 h-12 border border-[2px] border-black rounded-full flex justify-center items-center cursor-pointer pt-1"
-          //className="w-12 h-12 flex justify-center items-center cursor-pointer"
+          className={`z-20 w-12 h-12 border border-[2px] rounded-full flex justify-center items-center cursor-pointer pt-1 ${scrollY < 6160 ? "border-black" : "bg-white"}`}
         >
           <div
-            className={`hamburger hamburger--squeeze ${active ? "is-active" : ""}`}             
+            className={`hamburger hamburger--squeeze ${active ? "is-active" : ""}`}
             onClick={() => handleClick()}
             style={{
               scale: 0.5,
