@@ -22,7 +22,7 @@ export default function Macbook() {
     }, []);
 
   return (
-    <div className="flex bg-green-200 rounded-lg rounded-tr-[200px] justify-center items-center h-[100%] mac-wrapper start" ref={wrapper}>
+    <div className="flex justify-center items-center h-[100%] mac-wrapper start" ref={wrapper}>
       <svg width="100%" height="100%" viewBox="0 0 321 230" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" xmlSpace="preserve" 
         style={{fillRule: "evenodd", clipRule: "evenodd", strokeLineJoin: "round", strokeMiterlimit: "1.41421"}}>
           <g id="MacBook">

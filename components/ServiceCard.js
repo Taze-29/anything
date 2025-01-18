@@ -7,8 +7,7 @@ import Macbook from "@/components/anim/mac";
 
 import { GoArrowRight } from "react-icons/go";
 
-const ServiceCard = ({ title, tags, desc, link, imgSrc, content, range, progress, index }) => {
-
+const ServiceCard = ({ title, tags, desc, content, color, range, progress, index }) => {
 
   let scale = 1;
   let opacity = 1;
@@ -50,21 +49,9 @@ const ServiceCard = ({ title, tags, desc, link, imgSrc, content, range, progress
               </Link>            
             </div>
           </div>
-          <div className="flex px-16 w-[50%] justify-center items-center relative">
-            
-            {/* <div className="w-[100%] h-[80%] bg-red-500 border rounded-tr-[200px]" /> */}
+          <div className="flex px-16 w-[50%] justify-center items-center relative">                        
                         
-            <div className="w-[100%] h-[80%] overflow-hidden">
-              {/*
-              <motion.div
-                className="relative w-full h-full"
-                style={{
-                  scale: imageScale,
-                }}
-              >
-                <Image src={imgSrc} alt="Service" className="w-[100%] h-[80%] rounded-tr-[200px]" fill objectFit="cover"/>
-              </motion.div>
-              */}
+            <div className={`w-[100%] h-[80%] overflow-hidden ${color} rounded-lg rounded-tr-[200px]`}>
               {content}
             </div>
             

@@ -16,7 +16,8 @@ const cardData = [
     desc: "We design and develop modern, responsive websites that are tailored to your business needs. From e-commerce platforms to custom CMS solutions, we build it all.",
     //link: "https://example.com/website-development",
     imgSrc: "/img/service1.jpg",
-    content: <Macbook />
+    content: <Macbook />,
+    color: "bg-green-200",
   },
   {
     title: "Website Maintenance",
@@ -30,7 +31,8 @@ const cardData = [
     desc: "We provide ongoing website maintenance to keep your site secure, fast, and up-to-date. Focus on your business while we handle the technical details.",
     //link: "https://example.com/website-maintenance",
     imgSrc: "/img/service2.jpg",
-    content: <Cogs />
+    content: <Cogs />,
+    color: "bg-red-200",
   },
   {
     title: "Search Engine Optimization",
@@ -43,7 +45,8 @@ const cardData = [
     desc: "Our SEO services ensure your website ranks higher in search results. We optimize your content, improve site performance, and help you attract more traffic.",
     //link: "https://example.com/seo-services",
     imgSrc: "/img/service3.jpg",
-    content: <SEO />
+    content: <SEO />,
+    color: "bg-blue-200",
   },
 ];
 

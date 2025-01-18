@@ -2,7 +2,7 @@ import "./seo.css";
 
 export default function SEO () {
   return (
-    <div className="flex justify-center items-center bg-blue-200 rounded-lg rounded-tr-[200px] h-[100%]">
+    <div className="flex justify-center items-center h-[100%]">
       <div className="seo">
         <div className="seo-header">
           <span className="g"></span>

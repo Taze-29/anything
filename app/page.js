@@ -9,11 +9,21 @@ import Faq from "@/components/Faq";
 export default function Home() {
   return (
     <>    
-    <Hero />
-    <Services />
-    <Bespoke />
-    <Work />
-    <Faq />
+    <section>
+      <Hero />
+    </section>
+    <section>
+      <Services />
+    </section>
+    <section>
+      <Bespoke />
+    </section>
+    <section>
+      <Work />
+    </section>
+    <section>
+      <Faq />
+    </section>
     </>
   );
 }

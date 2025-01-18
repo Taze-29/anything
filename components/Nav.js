@@ -22,6 +22,10 @@ const Nav = () => {
   }
   , []);
 
+  function closeNav() {
+    setActive(false);
+  }
+
   return (
     <div className="fixed w-full h-28 flex justify-between z-50">
       <Link href="/" className="flex items-center">
@@ -69,11 +73,11 @@ const Nav = () => {
             opacity: active ? 1 : 0            
           }}
         >
-          <Link href="/">Home</Link>
-          <Link href="/services">Services</Link>
-          <Link href="/work">Our work</Link>
-          <Link href="/pricing">Pricing</Link>
-          <Link href="/contact">Contact</Link>
+          <Link href="/" onClick={() => closeNav()}>Home</Link>
+          <Link href="/services" onClick={() => closeNav()}>Services</Link>
+          <Link href="/work" onClick={() => closeNav()}>Our work</Link>
+          <Link href="/pricing" onClick={() => closeNav()}>Pricing</Link>
+          <Link href="/contact" onClick={() => closeNav()}>Contact</Link>
           <div className="flex justify-center items-center gap-2 border border-2 border-black rounded-full mr-10 mt-2 px-3 py-2 font-normal text-[17px] hover:bg-black hover:text-white transition-all duration-300 cursor-pointer">
             Start your project <GoArrowRight />
           </div>
