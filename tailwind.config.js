@@ -6,7 +6,10 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {      
+    extend: {    
+      backgroundImage: {
+        'contact-bg': "url('/img/contact-bg-img.png')", // Add your image path here
+      },  
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
