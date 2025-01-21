@@ -4,29 +4,27 @@ const PricingHero = () => {
     <div className="relative flex flex-col md:mt-[-2rem] ">
 
       <div className="absolute inset-0 flex justify-center top-20">
-        <div className="bg-teal relative opacity-50 rounded-full w-[400px] h-[400px] absolute animate-one blur-[100px]"></div>
-        <div className="bg-primary relative opacity-50 rounded-full w-[300px] h-[300px] absolute animate-two blur-[90px]"></div>
-        <div className="bg-purple relative opacity-50 rounded-full w-[400px] h-[400px] absolute animate-one blur-[90px]"></div>
+        <div className="bg-teal relative opacity-60 rounded-full w-[400px] h-[400px] absolute animate-one blur-[100px]"></div>
+        <div className="bg-primary relative opacity-60 rounded-full w-[300px] h-[300px] absolute animate-two blur-[90px]"></div>
+        <div className="bg-purple relative opacity-40 rounded-full w-[400px] h-[400px] absolute animate-one blur-[90px]"></div>
       </div>
 
 
       <div className="flex flex-col gap-16 relative md:px-[8rem] relative ">
-        <div className= "flex flex-row md:pb-[24px]">
-          <div className="w-[70%] flex items-end">
-            <h1 className="md:text-[12svh] leading-[0.99]  md:mgb-[-24px] z-20 sh">
+        <div className= "flex flex-row md:pb-[24px] md:h-[60vh]">
+          <div className="w-[70%] flex items-end md:pb-[8rem]">
+            <h1 className="md:text-[14svh] leading-[0.99]  md:mgb-[-24px] z-20 sh">
               Flexible Pricing,<br />
               Maximum value
             </h1>
           </div>
-          <div
-            className="w-[30%] bg-[url('/img/beauty.webp')] bg-cover bg-center rounded-full aspect-square"
-          ></div>
-        </div>
-        <div className="flex flex-row pb-8">
-          <div className="w-full"></div>
-          <div className="w-full">
-            <span className="w-[55%] block md:text-[2svh]">Creating custom websites with advanced design and development, optimized for performance, user experience, and business growth.</span>
+          <div className="w-[30%] flex justify-end items-end">
+            <span className=" block md:text-[2svh] ">Creating custom websites with advanced design and development, optimized for performance, user experience, and business growth.</span>
           </div>
+        </div>
+        <div className="flex flex-row pb-8 relative">
+          <div className="w-full"></div>
+          
         </div>
         <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none ">
         <svg
