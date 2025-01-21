@@ -4,8 +4,8 @@ import { GoArrowRight } from "react-icons/go";
 const CTABanner = () => {  
 
   return (
-    <div className="min-w-screen h-64 mt-24 mb-48 pr-[50%]">
-      <h2 className="text-7xl font-bold py-2">
+    <div className="min-w-screen h-72 md:h-64 mt-24 mb-48">
+      <h2 className="text-3xl md:text-7xl font-bold py-2">
         Transform Your Online Presence Today!
       </h2>
 

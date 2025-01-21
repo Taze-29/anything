@@ -19,7 +19,15 @@
 @font-face {
   font-family: 'Montreal';
   src: url('./fonts/Montreal-Bold.ttf') format('truetype');
-  font-weight: bold;
+  font-weight: bold;  
+}
+
+/* overflow */
+
+@media screen and (max-width: 768px) {
+  :root {    
+    overflow-x: clip;        
+  }  
 }
 
 /* Hover area */

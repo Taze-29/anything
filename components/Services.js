@@ -69,12 +69,12 @@ const Services = () => {
   const rotation = useTransform(scrollYProgress, [0, 0.22], [45, -45]);
 
   return (      
-    <div className="relative flex flex-col py-12"
+    <div className="relative flex flex-col -my-12 md:my-0 md:py-12"
       ref={container}
     >       
 
       <div className="sticky top-0">      
-        <div className="flex w-full px-36 relative top-[-10%] w-[90%] h-[90vh] mb-24">
+        <div className="flex w-full px-12 md:px-36 relative top-[-10%] w-[90%] h-[90vh] mb-24">
 
           <motion.div 
             className="flex w-full"
@@ -83,17 +83,17 @@ const Services = () => {
               opacity: opacity,
             }}
           >
-            <div className="flex flex-col text-[150px] leading-none w-[75%] justify-center">
+            <div className="flex flex-col text-5xl md:text-9xl leading-none w-[75%] justify-center">
               <span>OUR</span>
-              <span className="pl-64">SERVICES</span>
+              <span className="pl-4 md:pl-64">SERVICES</span>
             </div>
-            <div className="flex justify-end items-end w-[25%]">
+            <div className="flex justify-end items-end w-[100%] md:w-[25%] h-[75%] md:h-[100%]">
               <motion.div
                 style={{
                   rotate: rotation
                 }}
               >
-                <PiArrowDownLeftThin className="text-[250px]" />
+                <PiArrowDownLeftThin className="text-7xl md:text-[250px]" />
               </motion.div>
             </div>
           </motion.div>

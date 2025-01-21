@@ -17,8 +17,8 @@ const ServicesLarge = () => {
 
   return (
     <>
-    <div className="absolute h-[300svh] w-1/3">
-        <div className="sticky top-0 h-[100svh]">
+      <div className="hidden md:flex absolute h-[300svh] w-1/3">
+        <div className="sticky w-full top-0 md:h-[100svh]">
           <div className="flex justify-center items-center w-full h-full">
             <div className={`w-full aspect-square rounded-2xl ${scrollY < 1400 ? "bg-green-200" : scrollY >= 1400 && scrollY < 2300 ? "bg-red-200" : "bg-blue-200"}`}>
               {scrollY < 1400 && (
@@ -35,12 +35,17 @@ const ServicesLarge = () => {
         </div>
       </div>
 
-      <div className="flex justify-end items-center w-full pl-32">        
-        <div className="w-2/3 h-full h-[300svh]"> 
+      <div className="flex justify-end items-center w-full md:pl-32">
+        <div className="md:w-2/3 h-full md:h-[300svh]"> 
         {/* Web dev */}
-          <div className="h-[100svh] p-16">
+          <div className="md:h-[100svh] md:p-16">
             <Title num={"01"} title={"Website Development"} />
-            <div className="flex flex-col gap-6 px-16">
+            <div className="flex flex-col gap-6 md:px-16">
+
+              <div className="md:hidden flex justify-center items-center w-full aspect-square rounded-2xl overflow-hidden bg-green-200">
+                <Macbook />
+              </div>
+
               <p className="">At HOPZAG, we specialize in crafting custom websites that are engaging, responsive, and optimized for performance. Our expert developers combine creativity and the latest technologies to deliver websites that enhance user experiences and drive business success.</p>
 
               <h3 className="text-xl font-bold">Custom Code</h3>
@@ -57,28 +62,38 @@ const ServicesLarge = () => {
             </div>
           </div>
         {/* Web maintenance */}
-        <div className="h-[100svh] p-16">
-          <Title num={"02"} title={"Website Maintenance"} />
-          <div className="flex flex-col gap-6 px-16">
-            <p>We offer comprehensive website maintenance services to keep your site running smoothly and securely. Our team provides regular updates, monitoring, and support to ensure your website remains up-to-date, secure, and optimized for performance.</p>
-            
-            <h3 className="text-lg font-bold">Regular Updates</h3>
-            <p>We keep your website up-to-date with the latest software, security patches, and content updates to ensure it remains secure, functional, and relevant to your audience.</p>
-            
-            <h3 className="text-lg font-bold">Monitoring & Support</h3>
-            <p>We provide ongoing monitoring and support to address any issues that may arise, such as downtime, errors, or security vulnerabilities. Our team is available to help you resolve any issues quickly and efficiently.</p>
+          <div className="md:h-[100svh] md:p-16">
+            <Title num={"02"} title={"Website Maintenance"} />
+            <div className="flex flex-col gap-6 md:px-16">  
 
-            <h3 className="text-lg font-bold">Performance Optimization</h3>
-            <p>We monitor and optimize your website’s performance, focusing on speed, responsiveness, and load times. By making regular performance improvements, we help ensure a seamless user experience and improved site rankings.</p>
+              <div className="md:hidden flex justify-center items-start w-full aspect-square rounded-2xl overflow-hidden bg-red-200">
+                <Cogs />
+              </div>    
 
-            <h3 className="text-lg font-bold">Security & Backups</h3>
-            <p>Your website's security is our priority. We implement regular security checks, protect against threats, and back up your site’s data to ensure your content remains safe and recoverable in case of any issues.</p>
+              <p>We offer comprehensive website maintenance services to keep your site running smoothly and securely. Our team provides regular updates, monitoring, and support to ensure your website remains up-to-date, secure, and optimized for performance.</p>
+              
+              <h3 className="text-lg font-bold">Regular Updates</h3>
+              <p>We keep your website up-to-date with the latest software, security patches, and content updates to ensure it remains secure, functional, and relevant to your audience.</p>
+              
+              <h3 className="text-lg font-bold">Monitoring & Support</h3>
+              <p>We provide ongoing monitoring and support to address any issues that may arise, such as downtime, errors, or security vulnerabilities. Our team is available to help you resolve any issues quickly and efficiently.</p>
+
+              <h3 className="text-lg font-bold">Performance Optimization</h3>
+              <p>We monitor and optimize your website’s performance, focusing on speed, responsiveness, and load times. By making regular performance improvements, we help ensure a seamless user experience and improved site rankings.</p>
+
+              <h3 className="text-lg font-bold">Security & Backups</h3>
+              <p>Your website's security is our priority. We implement regular security checks, protect against threats, and back up your site’s data to ensure your content remains safe and recoverable in case of any issues.</p>
+            </div>
           </div>
-        </div>
         {/* SEO */}
-          <div className="h-[100svh] p-16">
+          <div className="md:h-[100svh] md:p-16">
             <Title num={"03"} title={"Search Engine Optimization"} />
-            <div className="flex flex-col gap-6 px-16">
+            <div className="flex flex-col gap-6 md:px-16">
+
+              <div className="md:hidden flex justify-center items-center w-full max-w-[calc(100vw-4rem)] aspect-square rounded-2xl overflow-hidden bg-blue-200">                
+                <SEO />                
+              </div>              
+
               <p>Our SEO services are designed to help your website rank higher in search engine results, drive organic traffic, and increase visibility online. We use proven strategies and best practices to optimize your site for search engines and improve your online presence.</p>
               
               <h3 className="text-lg font-bold">Keyword Research</h3>
@@ -102,9 +117,9 @@ const ServicesLarge = () => {
 
 function Title({ num, title }) {
   return (
-    <div className="flex gap-16 items-center mb-8">
-      <span className="text-sm text-gray-600">{num}</span>
-      <h2 className="text-5xl font-bold mb-2">{title}</h2>
+    <div className="flex flex-col md:flex-row gap-4 md:gap-16 items-start md:items-center mt-8 md:mt-0 mb-8">
+      <span className="text-xs md:text-sm text-gray-600">{num}</span>
+      <h2 className="text-3xl md:text-5xl font-bold mb-2">{title}</h2>
     </div>
   )
 }

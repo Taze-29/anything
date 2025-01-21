@@ -1,11 +1,12 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Canvas } from '@react-three/fiber';
 import { Environment } from "@react-three/drei";
 import Model from './Model';
 import { useMotionValue, useSpring } from "framer-motion"
 
 export default function FloatingShapes() {  
+
   const mouse = {
     x: useMotionValue(0),
     y: useMotionValue(0)
@@ -26,14 +27,14 @@ export default function FloatingShapes() {
   }
 
   useEffect( () => {
-    window.addEventListener("mousemove", manageMouse)
+    window.addEventListener("mousemove", manageMouse);    
     return () => window.removeEventListener("mousemove", manageMouse)
-  }, [])
+  }, [])  
 
   return (
-    <Canvas style={{background: "#e0e0e2"}} orthographic camera={{position: [0, 0, 200], zoom: 10}}>
+    <Canvas style={{background: "#f2f2f2"}} orthographic camera={{position: [0, 0, 200], zoom: 6}}>
         <Model mouse={smoothMouse}/>
-        <Environment preset="studio"/>
+        <hemisphereLight intensity={3} skyColor="#ffffff" groundColor="#717171" />
     </Canvas>
   )
 }

@@ -16,9 +16,7 @@ export default function Paragraph({paragraph}) {
       ref={container}         
       style={{
         display: "flex",
-        fontSize: "100px",
         lineHeight: 1,
-        padding: "40px",
         color: "black",
         flexWrap: "wrap",
         justifyContent: "center",
@@ -39,7 +37,7 @@ const Word = ({children, progress, range}) => {
   const amount = range[1] - range[0]
   const step = amount / children.length
   return (
-    <span className={"relative mr-[24px] mt-[24]px"}>
+    <span className={"relative mr-[8px] md:mr-[24px] md:mt-[24]px"}>
       {
         children.split("").map((char, i) => {
           const start = range[0] + (i * step);

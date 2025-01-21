@@ -34,8 +34,8 @@ const Faq = () => {
   const [active, setActive] = useState(null);
 
   return (
-    <div className="flex flex-col bg-black w-full text-white px-36 gap-6">
-      <h1 className="text-9xl mb-8">FAQ's</h1>            
+    <div className="flex flex-col bg-black w-full text-white px-8 md:px-36 gap-6 pt-24">
+      <h1 className="text-5xl md:text-9xl mb-8">FAQ's</h1>            
         {questions.map(({ q, a }, index) => {
           return (
             <div 
@@ -43,13 +43,13 @@ const Faq = () => {
               key={index}
             >
               <div 
-                className="text-4xl flex items-center gap-2 cursor-pointer z-10"
+                className="text-sm md:text-4xl flex items-center gap-2 cursor-pointer z-10"
                 onClick={() => setActive(active === index ? null : index)}
               >
                 <FaPlus className={`${active === index ? "rotate-45" : "rotate-0"} transition duration-500`}/> {q}
               </div>    
               <div className={`dropdown ${active === index && "active"}`}>
-                <div className="text-2xl pt-2 pl-11 w-1/2 overflow-hidden">{a}</div>
+                <div className="text-sm md:text-2xl pt-2 md:pl-11 md:w-1/2 overflow-hidden">{a}</div>
               </div>
             </div>
           );

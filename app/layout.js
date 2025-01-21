@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
         }}
       >
         <Nav />
-        <div className="pt-28">
+        <div className="md:pt-28">
           {children}
         </div>
         <Footer />

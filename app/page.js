@@ -21,9 +21,6 @@ export default function Home() {
     <section>
       <Work />
     </section>
-    <section>
-      <Faq />
-    </section>
     </>
   );
 }

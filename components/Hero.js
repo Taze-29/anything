@@ -6,13 +6,13 @@ const Hero = () => {
   return (
     <div>
       {/*Hero Text */}
-      <div className={`relative flex flex-col w-full font-bold md:leading-[34svh] top-[-4vh] overflow-hidden`}
+      <div className={`relative flex flex-col justify-center md:justify-start items-center md:items-start w-full min-h-[100svh] font-bold leading-[26vw] md:leading-[34svh] top-[-4vh] overflow-hidden`}
       style={{
         fontFamily: "GrandSapphire",
       }}
       >
 
-        <div className="text-[25vw] md:text-[30svh] md:pl-[12rem] -my-[2svh] overflow-hidden"> 
+        <div className="text-[20vw] md:text-[30svh] md:pl-[12rem] -my-[2svh] overflow-hidden"> 
           <motion.div
             initial={{ y: "100%" }}
             animate={{ y: "0%" }}
@@ -21,7 +21,7 @@ const Hero = () => {
             Crafting
           </motion.div>
         </div>
-        <div className="text-[25vw] md:text-[30svh] md:pl-[48rem] -my-[2svh] overflow-hidden"> 
+        <div className="text-[20vw] md:text-[30svh] md:pl-[48rem] -my-[2svh] overflow-hidden"> 
           <motion.div 
             initial={{ y: "100%" }}
             animate={{ y: "0%" }}
@@ -30,7 +30,7 @@ const Hero = () => {
             Digital
           </motion.div>
         </div>
-        <div className="text-[25vw] md:text-[30svh] md:pl-[8rem] -my-[2svh] overflow-hidden"> 
+        <div className="text-[20vw] md:text-[30svh] md:pl-[8rem] -my-[2svh] overflow-hidden"> 
           <motion.div 
             initial={{ y: "100%" }}
             animate={{ y: "0%" }}
@@ -41,7 +41,7 @@ const Hero = () => {
         </div>
 
         <div 
-          className="absolute bottom-[2svh] right-[-5%] leading-normal h-42 w-[30%] flex justify-center items-center pr-[12rem] pb-[2rem] text-xl text-gray-700"
+          className="absolute px-8 md:px-0 bottom-[8svh] md:bottom-[12svh] md:right-[-5%] leading-normal md:w-[30%] flex justify-end md:justify-center items-center md:pr-[12rem] md:pb-[2rem] md:text-xl text-gray-700"
           style={{
             fontFamily: "Montreal",
           }}
@@ -50,7 +50,7 @@ const Hero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: .5, delay: .5 }}
-            className="overflow-hidden"          
+            className="overflow-hidden text-balance"
           >                    
             <span className="font-normal">We’re a forward thinking web design and development agency located in England, dedicated to creating <span className="font-bold">stunning digital experiences</span> that stand out from the crowd.</span>
           </motion.div>
