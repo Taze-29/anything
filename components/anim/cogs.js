@@ -3,7 +3,7 @@ import "./cogs.css"
 
 export default function Cogs() {
   return (
-    <div className="flex flex-col justify-start items-center h-[100%] -mt-12 md:mt-0 md:pt-[10%] scale-[0.4] md:scale-[1]">
+    <div className="flex flex-col justify-start items-center h-[100%] -mt-32 xl:mt-0 lg:pt-[10%] scale-[0.4] xl:scale-[1]">
       <div
         className="cog"
         style={{          

@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 import Macbook from "@/components/anim/mac";
 import Cogs from "@/components/anim/cogs";
@@ -9,40 +9,85 @@ const ServicesLarge = () => {
 
   const [scrollY, setScrollY] = useState(0);
 
+  const heightRef = useRef(null);
+  const title1 = useRef(null);
+  const title2 = useRef(null);
+  const title3 = useRef(null);
+
+  const [active, setActive] = useState(0);
+
   useEffect(() => {
     window.addEventListener('scroll', () => {      
       setScrollY(window.scrollY);
     })
+    return () => {
+      window.removeEventListener('scroll', () => {
+        setScrollY(window.scrollY);
+      }
+    )};
   })
 
+  useEffect(() => {    
+    if (!title1.current && !title2.current && !title3.current) {
+      return;
+    }
+
+    if (scrollY > title3.current.offsetTop + window.innerHeight/2) {
+      setActive(2);
+      return;
+    } 
+    if (scrollY > title2.current.offsetTop + window.innerHeight/2) {
+      setActive(1);
+      return;
+    }         
+    if (scrollY > title1.current.offsetTop + window.innerHeight/2) {
+      setActive(0);
+      return;
+    }        
+  }, [scrollY]);
+
+
+  const stickyDiv = useRef(null);  
+
+  useEffect(() => {
+    if (title1.current){
+      console.log(title1.current.offsetHeight);
+      console.log(window.innerHeight);
+      if (title1.current.offsetHeight < window.clientHeight) {        
+        stickyDiv.current.style.height = `${title1.current.offsetHeight}px`;
+      }
+    }
+  }, [title1.current]);
+
   return (
-    <>
-      <div className="hidden md:flex absolute h-[300svh] w-1/3">
-        <div className="sticky w-full top-0 md:h-[100svh]">
-          <div className="flex justify-center items-center w-full h-full">
-            <div className={`w-full aspect-square rounded-2xl ${scrollY < 1400 ? "bg-green-200" : scrollY >= 1400 && scrollY < 2300 ? "bg-red-200" : "bg-blue-200"}`}>
-              {scrollY < 1400 && (
-                <Macbook />
-              )}
-              {scrollY >= 1400 && scrollY < 2300 && (
+    <>    
+      <div className="flex items-start w-full relative mb-8">        
+      <div className="hidden xl:flex basis-1/3 sticky h-inherit w-full top-0 justify-center items-center overflow-hidden">
+        <div className="flex justify-center items-center w-full h-screen" ref={stickyDiv}>
+          <div className={`w-full aspect-square rounded-2xl ${active === 0 ? "bg-green-200" : active === 1 ? "bg-red-200" : "bg-blue-200"}`}>
+            {active === 0 && (
+              <Macbook />
+            )}
+            {active === 1 && (
+              <div className="flex justify-center items-center lg:scale-[0.5] min-[1440px]:scale-[0.75] min-[1440px]:pt-[2vh] min-[2000px]:scale-[1] min-[2000px]:pt-[10%]">
                 <Cogs />
-              )}
-              {scrollY >= 2300 && (
+              </div>
+            )}
+            {active === 2 && (
+              <div className="flex justify-center items-center h-full min-[1280px]:scale-[0.5] min-[1750px]:scale-[1]">
                 <SEO />
-              )}
-            </div>
+              </div>
+            )}
           </div>
-        </div>
+        </div>          
       </div>
-
-      <div className="flex justify-end items-center w-full md:pl-32">
-        <div className="md:w-2/3 h-full md:h-[300svh]"> 
+      <div className="xl:basis-2/3 h-full xl:py-[10%]"> 
         {/* Web dev */}
-          <div className="md:h-[100svh] md:p-16">
+          <div className="xl:p-16" ref={title1}>
             <Title num={"01"} title={"Website Development"} />
-            <div className="flex flex-col gap-6 md:px-16">
+            <div className="flex flex-col gap-6 2xl:px-16">
 
-              <div className="md:hidden flex justify-center items-center w-full aspect-square rounded-2xl overflow-hidden bg-green-200">
+              <div className="xl:hidden flex justify-center items-center w-full aspect-square rounded-2xl overflow-hidden bg-green-200">
                 <Macbook />
               </div>
 
@@ -62,12 +107,14 @@ const ServicesLarge = () => {
             </div>
           </div>
         {/* Web maintenance */}
-          <div className="md:h-[100svh] md:p-16">
+          <div className="xl:p-16" ref={title2} >
             <Title num={"02"} title={"Website Maintenance"} />
-            <div className="flex flex-col gap-6 md:px-16">  
+            <div className="flex flex-col gap-6 2xl:px-16">  
 
-              <div className="md:hidden flex justify-center items-start w-full aspect-square rounded-2xl overflow-hidden bg-red-200">
-                <Cogs />
+              <div className="xl:hidden flex justify-center items-center w-full aspect-square rounded-2xl overflow-hidden bg-red-200">
+                <div className="flex justify-center items-center  md:scale-[2.5] mt-[30%]">
+                  <Cogs />
+                </div>
               </div>    
 
               <p>We offer comprehensive website maintenance services to keep your site running smoothly and securely. Our team provides regular updates, monitoring, and support to ensure your website remains up-to-date, secure, and optimized for performance.</p>
@@ -86,12 +133,14 @@ const ServicesLarge = () => {
             </div>
           </div>
         {/* SEO */}
-          <div className="md:h-[100svh] md:p-16">
+          <div className="xl:p-16" ref={title3} >
             <Title num={"03"} title={"Search Engine Optimization"} />
-            <div className="flex flex-col gap-6 md:px-16">
+            <div className="flex flex-col gap-6 2xl:px-16">
 
-              <div className="md:hidden flex justify-center items-center w-full max-w-[calc(100vw-4rem)] aspect-square rounded-2xl overflow-hidden bg-blue-200">                
-                <SEO />                
+              <div className="xl:hidden flex justify-center items-center w-full max-w-[calc(100vw-4rem)] aspect-square rounded-2xl overflow-hidden bg-blue-200">                
+                <div className="flex justify-center items-center md:scale-[2.5]">
+                  <SEO />
+                </div>
               </div>              
 
               <p>Our SEO services are designed to help your website rank higher in search engine results, drive organic traffic, and increase visibility online. We use proven strategies and best practices to optimize your site for search engines and improve your online presence.</p>
@@ -117,9 +166,9 @@ const ServicesLarge = () => {
 
 function Title({ num, title }) {
   return (
-    <div className="flex flex-col md:flex-row gap-4 md:gap-16 items-start md:items-center mt-8 md:mt-0 mb-8">
-      <span className="text-xs md:text-sm text-gray-600">{num}</span>
-      <h2 className="text-3xl md:text-5xl font-bold mb-2">{title}</h2>
+    <div className="flex flex-col xl:flex-row gap-4 xl:gap-16 items-start xl:items-center mt-8 xl:mt-0 mb-8">
+      <span className="text-xs xl:text-sm text-gray-600">{num}</span>
+      <h2 className="text-3xl xl:text-5xl font-bold mb-2">{title}</h2>
     </div>
   )
 }
