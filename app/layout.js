@@ -21,10 +21,8 @@ export default function RootLayout({ children }) {
           fontFamily: "Montreal",
         }}
       >
-        <Nav />
-        <div className="md:pt-28">
-          {children}
-        </div>
+        <Nav />        
+          {children}                
         <Footer />
       </body>
     </html>

@@ -7,6 +7,10 @@ module.exports = {
   ],
   theme: {    
     extend: {    
+      fontSize: {
+        heroSmall: "clamp(1rem, 15vw, 30rem)",
+        heroLarge: "clamp(1rem, 15vw, 30rem)",
+      },
       backgroundImage: {
         'contact-bg': "url('/img/contact-bg-img.png')",
       },  

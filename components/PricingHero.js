@@ -11,7 +11,6 @@ const PricingHero = () => {
         <div className="bg-purple relative opacity-40 rounded-full w-[200px] h-[200px] lg:w-[400px] lg:h-[400px] absolute animate-one blur-[40px] lg:blur-[90px]"></div>
       </div>
 
-
       <div className="flex flex-col xl:gap-16 relative lg:px-[8rem] md:px-[3rem] sm:px-[4rem] px-[2rem] relative ">
         <div className= "flex flex-col xl:flex-row md:pb-[24px] xl:h-[60vh] lg:h-[40vh] sm:h-[30vh] h-[70vh]">
           <div className=" xl:w-[70%] flex items-end xl:pb-[10rem] lg:pb-[3rem] pb-[4rem]">

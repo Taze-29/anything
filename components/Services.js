@@ -23,9 +23,9 @@ const cardData = [
     title: "Website Maintenance",
     tags: [
       "Regular updates",
+      "Bug fixes",
       "Performance monitoring",
       "Security checks",
-      "Bug fixes",
       //"backup solutions"
     ],
     desc: "We provide ongoing website maintenance to keep your site secure, fast, and up-to-date. Focus on your business while we handle the technical details.",
@@ -69,12 +69,12 @@ const Services = () => {
   const rotation = useTransform(scrollYProgress, [0, 0.22], [45, -45]);
 
   return (      
-    <div className="relative flex flex-col -my-12 md:my-0 md:py-12"
+    <div className="relative flex flex-col -my-12 lg:my-0 lg:py-12 overflow-x-clip"
       ref={container}
     >       
 
       <div className="sticky top-0">      
-        <div className="flex w-full px-12 md:px-36 relative top-[-10%] w-[90%] h-[90vh] mb-24">
+        <div className="flex w-full px-12 lg:px-36 relative top-[-10%] w-[90%] h-[90vh] mb-24">
 
           <motion.div 
             className="flex w-full"
@@ -83,17 +83,17 @@ const Services = () => {
               opacity: opacity,
             }}
           >
-            <div className="flex flex-col text-5xl md:text-9xl leading-none w-[75%] justify-center">
+            <div className="flex flex-col text-5xl lg:text-8xl xl:text-9xl leading-none w-[75%] justify-center">
               <span>OUR</span>
-              <span className="pl-4 md:pl-64">SERVICES</span>
+              <span className="pl-4 lg:pl-32 xl:pl-64">SERVICES</span>
             </div>
-            <div className="flex justify-end items-end w-[100%] md:w-[25%] h-[75%] md:h-[100%]">
+            <div className="flex justify-end items-end w-[100%] lg:w-[25%] h-[75%] lg:h-[100%]">
               <motion.div
                 style={{
                   rotate: rotation
                 }}
               >
-                <PiArrowDownLeftThin className="text-7xl md:text-[250px]" />
+                <PiArrowDownLeftThin className="text-7xl lg:text-9xl xl:text-[250px]" />
               </motion.div>
             </div>
           </motion.div>

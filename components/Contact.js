@@ -51,10 +51,10 @@ const Contact = () => {
         };
 
     return (
-    <div className="h-screen flex relavtive justify-between md:px-[8rem]">
+    <div className="h-screen flex relavtive justify-between lg:px-[8rem]">
         <div className="flex flex-col w-[35%] gap-8 h-[70%] justify-center">
-            <p className='md:text-2xl'>Contact Us</p>
-            <h2 className='md:text-6xl'>Your project<br /> Take the next step</h2>
+            <p className='lg:text-2xl'>Contact Us</p>
+            <h2 className='lg:text-6xl'>Your project<br /> Take the next step</h2>
             <p className=''>Send us an email and let us know everything you want out of a new site. We respond to everyone within 24 hours of contacting us. Or give us a call and reach us immediately for a chat. If we are unavailable we will call back same day.</p>
         </div>
         <form className="w-[45%]" onSubmit={handleSubmit}>
@@ -66,7 +66,7 @@ const Contact = () => {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full md:text-xl p-2 border-b-2 border-gray-300 bg-inherit focus:outline-none"
+                    className="w-full lg:text-xl p-2 border-b-2 border-gray-300 bg-inherit focus:outline-none"
                     placeholder="Name *"
                     required
                     />
@@ -78,7 +78,7 @@ const Contact = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full md:text-xl p-2 border-b-2 border-gray-300 bg-inherit focus:outline-none"
+                    className="w-full lg:text-xl p-2 border-b-2 border-gray-300 bg-inherit focus:outline-none"
                     placeholder="Email *"
                     required
                     />
@@ -90,7 +90,7 @@ const Contact = () => {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full md:text-xl p-2 border-b-2 border-gray-300 bg-inherit focus:outline-none"
+                    className="w-full lg:text-xl p-2 border-b-2 border-gray-300 bg-inherit focus:outline-none"
                     placeholder="Phone Number *"
                     />
                 </div>
@@ -101,7 +101,7 @@ const Contact = () => {
                     rows="1"
                     value={formData.message}
                     onChange={handleChange}
-                    className="w-full md:text-xl p-2 border-b-2 border-gray-300 bg-inherit focus:outline-none"
+                    className="w-full lg:text-xl p-2 border-b-2 border-gray-300 bg-inherit focus:outline-none"
                     placeholder="Message"
                     ></textarea>
                 </div>
@@ -126,7 +126,7 @@ const Contact = () => {
                 <button
                     type="submit"
                     disabled={submitting}
-                    className="border-2 md:text-xl border-black rounded-full py-2 px-4 hover:bg-black hover:text-white transition-all duration-300"
+                    className="border-2 lg:text-xl border-black rounded-full py-2 px-4 hover:bg-black hover:text-white transition-all duration-300"
                     >
                         {submitting ? "Submitting..." : "Submit"}
                     </button>

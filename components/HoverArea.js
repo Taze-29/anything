@@ -40,7 +40,7 @@ export default function Index() {
   return (
     <>
       <Modal modal={modal} projects={projects} project={project} />
-      <div className="flex flex-col justify-center items-start md:h-[100vh] w-full px-8 md:px-36 mb-8 md:mb-0 text-gray-300">
+      <div className="flex flex-col justify-center items-start xl:h-[100vh] w-full px-8 lg:px-16 xl:px-36 mb-8 lg:mb-16 text-black lg:text-gray-300">
         {projects.map(({ name, number, desc }, index) => {
           return (
             <div 
@@ -55,16 +55,16 @@ export default function Index() {
                 }}
               key={index}            
             >
-              <div className="flex w-full py-4 md:py-10 hover:text-black justify-between">
+              <div className="flex w-full py-4 lg:py-10 lg:hover:text-black justify-between">
                 <div className="flex flex-col">
-                <span className="text-xs md:text-3xl md:mb-10">{number}</span>
+                <span className="text-xs lg:text-3xl lg:mb-10">{number}</span>
                 <h2                
-                  className={`w-[fit-content] text-xl md:text-[6vw] z-40 transition-all duration-200 hover:color-[#d38d2c] ${modal && project === index ? "translate-x-[-2px] md:translate-x-[-10px]" : "translate-x-0"}`}
+                  className={`w-[fit-content] text-xl lg:text-[6vw] 2xl:text-8xl z-40 transition-all duration-200 hover:color-[#d38d2c] ${modal && project === index ? "translate-x-[-2px] lg:translate-x-[-10px]" : "translate-x-0"}`}
                 >
                   {name}
                 </h2>
                 </div>
-                <div className={`flex w-2/3 md:w-1/4 items-center z-40 text-xs md:text-2xl transition-opacity duration-500 ${modal && project === index ? "opacity-100" : "opacity-0"}`}>
+                <div className={`flex w-2/3 xl:w-1/4 items-center z-40 text-sm lg:text-lg 2xl:text-2xl transition-opacity duration-500 ${modal && project === index ? "opacity-100" : "opacity-100 lg:opacity-0"}`}>
                   {desc}
                 </div>
               </div>     
