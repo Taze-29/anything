@@ -12,7 +12,7 @@ export default function Home() {
       <div className="absolute w-full h-full flex justify-center items-center">
         <h1 className="text-5xl lg:text-9xl z-10 cursor-default">SERVICES</h1>
       </div>      
-      <div className="hidden lg:flex absolute w-full h-full justify-center items-end pb-8">
+      <div className="hidden xl:flex absolute w-full h-full justify-center items-end pb-8">
         <ScrollIndicator />
       </div>
       

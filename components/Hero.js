@@ -64,9 +64,19 @@ export default function Hero2() {
         transition={{ duration: 1, delay: 0.3 }}
         className="flex lg:hidden px-16 pt-16 -mb-16 text-gray-800 text-sm text-center sm:text-base md:text-lg">
         <span className="font-normal">We’re a forward thinking web design and development agency located in England, dedicated to creating <span className="font-bold">stunning digital experiences</span> that stand out from the crowd.</span>
-      </motion.div>      
+      </motion.div>
+
+      {/*Background spots */}      
+        <div className="absolute -z-10 top-[35vh] left-[40vw] xl:left-[25vw] h-[35vh] xl:h-[45vh] aspect-square transform-gpu -translate-x-1/2 -translate-y-1/2" style={{          
+          background: "radial-gradient(circle, rgba(229,115,115,1) 0%, rgba(0,0,0,0) 66%)",
+        }} />
+        <div className="absolute -z-10 top-[45vh] xl:top-[50vh] left-[60vw] xl:left-[33vw] h-[35vh] xl:h-[45vh] aspect-square transform-gpu -translate-x-1/2 -translate-y-1/2" style={{                    
+          background: "radial-gradient(circle, rgba(100,181,246,1) 0%, rgba(0,0,0,0) 66%)",
+        }} />
+        <div className="absolute -z-10 top-[55vh] xl:top-[80vh] left-[40vw] xl:left-[25vw] h-[35vh] xl:h-[45vh] aspect-square transform-gpu -translate-x-1/2 -translate-y-1/2" style={{                    
+          background: "radial-gradient(circle, rgba(129,199,132,1) 0%, rgba(0,0,0,0) 66%)",
+        }} />      
 
     </div>
-
   )
 }
