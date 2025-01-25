@@ -14,7 +14,7 @@ const PricingHero = () => {
       <div className="flex flex-col xl:gap-16 relative lg:px-[8rem] md:px-[3rem] sm:px-[4rem] px-[2rem] relative ">
         <div className= "flex flex-col xl:flex-row md:pb-[24px] xl:h-[60vh] lg:h-[40vh] sm:h-[30vh] h-[70vh]">
           <div className=" xl:w-[70%] flex items-end xl:pb-[10rem] lg:pb-[3rem] pb-[4rem]">
-            <h1 className="2xl:text-[13svh] xl:text-[10svh] lg:text-[10svh] md:text-[7svh] sm:text-[7svh] text-[14vw] leading-[0.99] md:mgb-[-24px] z-20">
+            <h1 className="2xl:text-[13svh] xl:text-[10svh] lg:text-[6svh] md:text-[7svh] sm:text-[7svh] text-[14vw] leading-[0.99] md:mgb-[-24px] z-20">
               Flexible Pricing,<br />
               Maximum value
             </h1>

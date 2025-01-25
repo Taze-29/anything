@@ -170,7 +170,7 @@
     /* Ipad-contact */
     @media (min-width: 1024px) and (max-width: 1280px) and (min-height: 1200px) {
       .ipad-pro-landscape-custom {
-        background-size: 90% !important;
+        background-size: 100% !important;
         background-position: center !important;
       }
     }

@@ -51,10 +51,10 @@ const Contact = () => {
         };
 
     return (
-    <div className="xl:h-screen lg:h-screen flex py-8 xl:py-0 flex-col gap-8 xl:flex-row relavtive items-center xl:justify-between px-7 xl:px-[8rem]">
+    <div className="xl:h-screen xl:h-screen flex py-8 xl:py-0 flex-col gap-8 xl:flex-row relavtive items-center xl:justify-between px-7 xl:px-[8rem]">
         <div className="flex flex-col xl:w-[35%] xl:gap-8 gap-4 xl:h-[70%] items-center xl:items-start ">
             <p className='xl:text-2xl text-[14px] lg:text-2xl'>Contact Us</p>
-            <h2 className='text-[18px] xl:text-6xl lg:text-4xl text-center xl:text-left'>Your project<br /> Take the next step</h2>
+            <h2 className='text-[18px] xl:text-6xl lg:text-4xl text-center xl:text-left'>Your Vision<br /> Make It a Reality</h2>
             <p className='text-[12px] lg:text-[16px] text-center xl:text-left'>Send us an email and let us know everything you want out of a new site. We respond to everyone within 24 hours of contacting us. Or give us a call and reach us immediately for a chat. If we are unavailable we will call back same day.</p>
         </div>
         <form className="xl:w-[45%] w-[100%]" onSubmit={handleSubmit}>

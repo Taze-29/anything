@@ -14,16 +14,16 @@ const SecondHero = () => {
             />
         </div>
         <h1 className="absolute px-7 lg:px-0 leading-[0.85] lg:bottom-12 lg:right-8 lg:text-right text-[13vw] top-28 lg:top-auto lg:text-[10vw]  ">
-            LIMITLESS<br /> DESIGN<br /> SOLUTIONS
+        INNOVATE<br />  CREATE<br /> TRANSFORM
         </h1>
-        <span className="absolute top-52 lg:left-8 2xl:left-16 -translate-y-1/2 text-left text-sm md:text-base md:w-52 text-[#343a40] hidden lg:block">
-            UNLEASHING BOUNDLESS CREATIVITY FOR YOUR BRAND
+        <span className="absolute top-52 lg:left-8 2xl:left-16 -translate-y-1/2 text-left text-sm md:text-base md:w-64 text-[#343a40] hidden lg:block">
+            ELEVATING YOUR BRAND WITH BOUNDLESS IMAGINATION
         </span>
-        <span className="absolute bottom-32 2xl:left-28 left-16 text-right text-sm md:text-base md:w-72 text-[#343a40] hidden lg:block">
-            VISIONARY DESIGNERS DEDICATED TO TRANSFORMING YOUR IDEAS INTO VISUALS
+        <span className="absolute bottom-32 lg:bottom-64 xl:bottom-32 2xl:left-28 left-16 lg:left-0 xl:left-16 text-right text-sm md:text-base md:w-64 text-[#343a40] hidden lg:block">
+            CREATIVE EXPERTS COMMITTED TO BRINGING YOUR VISION TO LIFE
         </span>
         <span className="absolute text-left text-[16px] bottom-[12vh] text-[#343a40] lg:hidden px-7">
-            UNLEASHING BOUNDLESS CREATIVITY FOR YOUR BRAND, VISIONARY DESIGNERS DEDICATED TO TRANSFORMING YOUR IDEAS INTO VISUALS
+            ELEVATING YOUR BRAND WITH BOUNDLESS IMAGINATION, CREATIVE EXPERTS COMMITTED TO BRINGING YOUR VISION TO LIFE
         </span>
     </div>
     
