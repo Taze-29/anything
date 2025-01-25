@@ -165,3 +165,12 @@
     bottom: 0;
     transform: rotate(-90deg);
     transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1); }
+
+
+    /* Ipad-contact */
+    @media (min-width: 1024px) and (max-width: 1280px) and (min-height: 1200px) {
+      .ipad-pro-landscape-custom {
+        background-size: 90% !important;
+        background-position: center !important;
+      }
+    }

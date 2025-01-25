@@ -3,7 +3,7 @@ import Link from "next/link";
 const PricingHero = () => {
 
     return (
-    <div className="relative flex flex-col xl:mt-[-2rem] lg:mt-[1rem] md:mt-[0rem] pt-[9rem] md:pt-[0rem]">
+      <div className="relative flex flex-col xl:mt-[rem] lg:mt-[1rem] md:mt-[0rem] pt-[9rem] xl:pt-[0rem]">
 
       <div className="absolute sm:inset-0 flex flex-col sm:flex-row  justify-center md:top-[-80px] lg:top-[-40px] xl:top-20 top-0">
         <div className="bg-teal relative opacity-60 rounded-full w-[200px] h-[200px] lg:w-[400px] lg:h-[400px] absolute animate-one blur-[40px] lg:blur-[100px]"></div>
