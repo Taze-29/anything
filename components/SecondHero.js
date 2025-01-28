@@ -14,7 +14,7 @@ const SecondHero = () => {
             />
         </div>
         <h1 className="absolute px-7 lg:px-0 leading-[0.85] lg:bottom-12 lg:right-8 lg:text-right text-[13vw] top-28 lg:top-auto lg:text-[10vw]  ">
-        INNOVATE<br />  CREATE<br /> TRANSFORM
+        ENHANCE<br />  YOUR<br /> VISION
         </h1>
         <span className="absolute top-52 lg:left-8 2xl:left-16 -translate-y-1/2 text-left text-sm md:text-base md:w-64 text-[#343a40] hidden lg:block">
             ELEVATING YOUR BRAND WITH BOUNDLESS IMAGINATION
